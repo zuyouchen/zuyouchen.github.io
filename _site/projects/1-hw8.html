@@ -53,7 +53,7 @@
   <main class="flex-shrink-0 container mt-5">
     <nav class="navbar navbar-expand-lg navbar-themed">
 
-  <a class="navbar-brand" href="/"><h5><b>Evan Chen - IS445 Site</b></h5></a>
+  <a class="navbar-brand" href="/"><h5><b>Evan Chen - IS445 - Data Visualization</b></h5></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
@@ -78,20 +78,44 @@
 
 <p>I used Python, Altair, and vega-lite to create two visualizations of the <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">Government Buildings Dataset</a>.</p>
 
+<p>Much of the schema configuration for these visualizations derives from the previous assignment, HW7, hosted on <a href="https://starboard.gg/ezchen/is445-hw7-nw5otWn">this starboard notebook</a>.</p>
+
 <hr />
 <h2 id="visualization-1-govt-buildings">Visualization 1: Govt. Buildings</h2>
-<p>For this first, …</p>
+<p>For this first visualization, I am “trying to highlight the <strong>distribution of government buildings</strong> in a specific county based on square footage.” (HW7). The histogram generated visualizes groups of buildings within a specific county or set of counties from the dataset in bins of 20,000 square feet. I’ve encoded “building status (Abandoned, In Progress, or In Use) to the <code class="language-plaintext highlighter-rouge">color</code> of the bar, creating a stacked effect and allowing the viewer to easily <strong>distinguish</strong> between building statuses.” (HW7). Despite my visualization being quite similar to the version generated via Starboard &amp; Vega-Lite for HW7, I’ve made adjustments by <strong>adding interactivity</strong> and porting the visualization with Python and Altair.</p>
+
+<p>The x-axis and y-axis are both <strong>encoded as quantitative types</strong> specified by the string Q. The following snippet from my Python notebook demonstrates this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x=alt.X('Square Footage:Q', bin=alt.Bin(step=20000), title="Square Footage"),
+y=alt.Y('count():Q', title="Number of Buildings")
+</code></pre></div></div>
+
+<p>On the analysis side of things, I applied a few data transformations to the dataset in order to make this visualization interactive. I first had to load in the data from the URL into a DataFrame. Following this, I dropped all <code class="language-plaintext highlighter-rouge">NaN</code> values from the <code class="language-plaintext highlighter-rouge">County</code> columns using <code class="language-plaintext highlighter-rouge">df = df.dropna(subset=['County'])</code>. This was to ensure that the Altair dropdown and selection did not have a <code class="language-plaintext highlighter-rouge">NaN</code> option. I also chose to apply a <strong>filter</strong> to the DataFrame, only including counties that have <strong>over 150 buildings</strong>. This decision came after first producing the plot with the dropdown of selecting all counties, which I found to be overwhelming (too many). With this filter, the visualization and interactive dropdown became simpler. This also reduces our DataFrame to be less than 5000 rows, avoiding the large dataset error without having to modify Altair settings.</p>
+
+<p>To get the interactivity dropdown to work, I had to rewrite the chart generation code to include a selection dropdown defined by <code class="language-plaintext highlighter-rouge">alt.binding_select()</code> and <code class="language-plaintext highlighter-rouge">alt.selection_point()</code>. I began by allowing the user to select any of the unique values in <code class="language-plaintext highlighter-rouge">df['County']</code> present after the filter, but then discovered via. Slack that I should add a <code class="language-plaintext highlighter-rouge">None</code> type-option to accomodate for the default choice (where no single County is selected and the entire DataFrame is used). The interactive option to select a County makes this visualization <strong>more interesting</strong> because it is no longer static. A user can select between the counties that have &gt;150 government buildings and easily compare their square footage and building type.</p>
+
+<p>The first visualization alongside its interactive dropdown are included below: 
+<br />
+<br /></p>
 
 <vegachart schema-url="/assets/json/hw8-viz1.json" style="width: 100%"></vegachart>
 <hr />
 
 <h2 id="visualization-2-uiuc-buildings">Visualization 2: UIUC Buildings</h2>
-<p>For this second, …</p>
+<p>For this second visualization, I chose to avoid overcomplicating it with interactivity and copied the entire second visualization’s JSON schema from vega-lite into Altair using <code class="language-plaintext highlighter-rouge">alt.Chart.from_dict()</code>. This visualizations aims to “highlight the construction of buildings over time at the University of Illinois at Urbana-Champaign (UIUC).” (HW7). The vega-lite JSON specification first filters the dataset to only include buildings constructed at UIUC. Then, I have <strong>encoded</strong> the Year Constructed as a temporal type variable on the x-axis, and an aggregation of the number of buildings in that year as a quantitative variable on the y-axis.</p>
+
+<p>The visualization’s filled area color is not encoded by any particular variable, but the color theme was <strong>deliberately chosen</strong> to be the colors of the University of Illinois Urbana-Champaign. “Specifically, I went to https://brand.illinois.edu/visual-identity/color and copied the hex code values for <strong>Illini blue and orange</strong>. This choice of colors in a gradient emphasizes the visualization’s specificity to the University.” (HW7).</p>
+
+<p>I <strong>did not</strong> perform any Python data transformations on the dataset for this second visualization. Ultimately, there are no stylistic changes or additions when comparing this iteration of the chart versus the HW7 version. I merely ensured that the visualization could be <strong>published</strong> on the web by loading it into Altair and saving the JSON.</p>
+
+<p>The second visualization is included below: 
+<br />
+<br /></p>
 
 <vegachart schema-url="/assets/json/hw8-viz2.json" style="width: 100%"></vegachart>
 
 <hr />
-<h2 id="search-the-data--methods">Search The Data &amp; Methods</h2>
+<h2 id="the-data--methods">The Data &amp; Methods</h2>
 
 <p>Below are links to both the data and the analysis code as buttons:</p>
 
@@ -104,7 +128,7 @@
 </div>
 
 <div class="right">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/zuyouchen/zuyouchen.github.io/blob/main/python_notebooks/hw8.ipynb">
   The Analysis
 </a>
 </div>
