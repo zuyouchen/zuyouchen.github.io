@@ -104,6 +104,9 @@ body { font-family: "Poppins", sans-serif; }
 
 .right { float: right; text-align: right; }
 
+/* Style tooltip to avoid grey on black background */
+#vg-tooltip-element { background-color: #333; /* Dark background for the tooltip */ color: #FFF; /* White text color */ padding: 8px; /* Some padding inside the tooltip */ border-radius: 4px; /* Rounded corners */ border: 1px solid #777; /* A subtle border */ }
+
 .search-box { box-shadow: none !important; }
 
 .post.card { border-radius: 15px; text-decoration: none !important; padding: 15px; height: 100%; }
