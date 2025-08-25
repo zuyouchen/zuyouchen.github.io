@@ -21,7 +21,7 @@ title                    : "Evan Zuyou Chen (陈祖佑)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Evan Zuyou Chen"
-description              : "Personal website."
+description              : "Evan Zuyou Chen - MSCS Student at UIUC"
 url                      : "https://zuyouchen.github.io" 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "zuyouchen/zuyouchen.github.io" 
@@ -82,7 +82,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : lzl8yC1Ef3uYHvVn-KydGRELzx4bT1kr_4BU5rWgbH0
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
@@ -99,9 +99,11 @@ og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Person"
+  name                   : "Evan Zuyou Chen"
+  links: 
+    - "https://github.com/zuyouchen"
+    - "https://www.linkedin.com/in/zuyouchen/"
 
 # Analytics
 analytics:
