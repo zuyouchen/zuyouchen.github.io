@@ -19,4 +19,4 @@ main:
   - title: "Projects"
     url: /projects/
   - title: "CV"
-    url: /assets/files/Evan_Chen_CV_FA25_v3.pdf
+    url: /assets/files/Evan_Chen_CV.pdf?v=1 # when updating this file, increment version number here
