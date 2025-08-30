@@ -126,6 +126,17 @@
 
         {% capture anchorBody %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
 
+        {# --- NEW LOGIC TO SPLIT TITLE AND DATE --- #}
+        {% assign parts = anchorBody | split: '(' %}
+        {% if parts.size > 1 %}
+        {% assign title = parts[0] | rstrip %}
+        {% capture date %}({{ parts | last }}{% endcapture %}
+        {% capture anchorBody %}
+            <span class="toc-title">{{ title }}</span><span class="toc-date">{{ date }}</span>
+        {% endcapture %}
+        {% endif %}
+        {# --- END NEW LOGIC --- #}
+
         {% if htmlID %}
             {% capture anchorAttributes %} href="{% if baseURL %}{{ baseURL }}{% endif %}#{{ htmlID }}"{% endcapture %}
 
