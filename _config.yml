@@ -121,9 +121,6 @@ author:
   location         : "Chicago, IL"
   email            : evan.zuyou.chen@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:evan.zuyou.chen@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/zuyouchen"
