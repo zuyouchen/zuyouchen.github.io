@@ -119,7 +119,7 @@ author:
   avatar           : "/assets/images/evan-hiking-cropped.jpeg"
   bio              : "MSCS Student @ UIUC"
   location         : "Chicago, IL"
-  email            : evan.zuyou.chen@gmail.com; echen48@illinois.edu
+  email            : evan.zuyou.chen@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
