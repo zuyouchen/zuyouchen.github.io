@@ -49,14 +49,14 @@ classes: wide # ensures that we span the width of the page
     margin-bottom: 2em;
   }
 
-/* Expandable author toggle */
-.author-more {
-    color: #2F7D95;
-    cursor: pointer;
-    user-select: none;
-    display: inline;
-    text-decoration: underline;
-}
+  /* Expandable author toggle */
+  .author-more {
+      color: #2F7D95;
+      cursor: pointer;
+      user-select: none;
+      display: inline;
+      text-decoration: underline;
+  }
   
   .author-expanded {
     display: none;
