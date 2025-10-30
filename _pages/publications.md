@@ -106,7 +106,7 @@ classes: wide # ensures that we span the width of the page
               </span>
           </span><br>
           <i>International Conference on Computer Vision (ICCV) 2025</i><br>
-          <a href="/assets/files/Demeter.pdf?v=1">[Paper]</a>
+          <a href="https://arxiv.org/abs/2510.16377" target="_blank" rel="noopener noreferrer">[Paper]</a>
           <a href="https://tianhang-cheng.github.io/Demeter/" target="_blank" rel="noopener noreferrer">[Website]</a>
           <!-- <a href="https://iccv.thecvf.com/virtual/2025/poster/2558" target="_blank" rel="noopener noreferrer">[Poster]</a> -->
         </p>
