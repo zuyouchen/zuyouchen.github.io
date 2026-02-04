@@ -105,6 +105,9 @@ toc_icon: "briefcase" # from https://fontawesome.com/v6/search?q=work&s=solid&o=
   }
 </style>
 
+<meta name="description" content="Explore the professional experience of Evan Zuyou Chen, a Software Engineer and M.S. Computer Science student at UIUC, specializing in Full Stack Development, Cloud Computing, and Data Engineering.">
+<meta name="keywords" content="Evan Chen, Evan Zuyou Chen, Evan Chen UIUC, Evan Chen Software, Software Engineer, Full Stack Developer, Computer Science, University of Illinois, UIUC, Cloud Computing, Data Engineering, Agricultural Technology">
+
 <div class="experience-divider"></div>
 
 <h2 class="experience-title" id="grad-research-uiuc">

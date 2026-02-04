@@ -17,17 +17,30 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Evan Zuyou Chen (陈祖佑)"
+title                    : "Evan Zuyou Chen | M.S. Computer Science @ UIUC, Software Engineer"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Evan Zuyou Chen"
-description              : "Evan Zuyou Chen - MSCS Student at UIUC"
+description              : "Portfolio of Evan Zuyou Chen, a Master's in Computer Science student at UIUC specializing in Full Stack Development, Cloud Computing, and Data Engineering."
+masthead_title           : "Evan Zuyou Chen (陈祖佑)"
+keywords:
+  - Evan Chen
+  - Evan Zuyou Chen
+  - Evan Chen UIUC
+  - Evan Chen Software
+  - Software Engineer
+  - Full Stack Developer
+  - Computer Science
+  - University of Illinois
+  - UIUC
+  - Cloud Computing
+  - Data Engineering
+  - Agricultural Technology
 url                      : "https://zuyouchen.github.io" 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "zuyouchen/zuyouchen.github.io" 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)

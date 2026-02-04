@@ -7,6 +7,9 @@ classes: wide # ensures that we span the width of the page
 # TODO: Consider adding Godot Platformer (415), Other ASC Research Projs, etc.
 ---
 
+<meta name="description" content="Discover the projects of Evan Zuyou Chen, showcasing expertise in Full Stack Development, Cloud Computing, and Data Engineering.">
+<meta name="keywords" content="Evan Chen, Evan Zuyou Chen, Evan Chen UIUC, Evan Chen Software, Software Engineer, Full Stack Developer, Computer Science, University of Illinois, UIUC, Cloud Computing, Data Engineering, Agricultural Technology">
+
 <style>
   /* Keep everything inside the main archive column */
   .entries-list {

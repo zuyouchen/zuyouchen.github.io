@@ -8,6 +8,9 @@ classes: wide # ensures that we span the width of the page
 # TODO: Add back the Demeter image and [paper] link once available
 ---
 
+<meta name="description" content="Explore the publications of Evan Zuyou Chen, a Software Engineer and M.S. Computer Science student at UIUC, specializing in Full Stack Development, Cloud Computing, and Data Engineering.">
+<meta name="keywords" content="Evan Chen, Evan Zuyou Chen, Evan Chen UIUC, Evan Chen Software, Software Engineer, Full Stack Developer, Computer Science, University of Illinois, UIUC, Cloud Computing, Data Engineering, Agricultural Technology">
+
 <style>
   /* Keep everything inside the main archive column */
   .entries-list {
